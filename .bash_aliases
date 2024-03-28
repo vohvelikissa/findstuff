@@ -13,3 +13,6 @@ findexternals() {
 lsrfg() {
 	ls -Rfg ./$1 | less
 }
+locatemydebpkgs() {
+	find . | grep ".deb$" | grep "$1" | cat
+}
